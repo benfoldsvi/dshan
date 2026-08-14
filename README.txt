@@ -1,19 +1,52 @@
-Replace these two files in the root of your GitHub Pages repository:
+EMERGING NANOELECTRONICS LAB v8
 
-- people.html
-- style.css
+UPLOAD THESE FILES TO THE ROOT OF YOUR GITHUB PAGES REPOSITORY:
 
-Image folder remains:
+index.html
+research.html
+people.html
+publications.html
+news.html
+style.css
+
+IMAGE PATH — IMPORTANT
+======================
+
+Every image reference in this package uses exactly:
 
 Images/People/
 
-This version includes:
-- two members per row on desktop
-- photo left / text right
-- circular photos for members
-- rectangular PI photo
-- dark member section inspired by the Fukami-Kanai layout
-- dotted divider lines
-- scroll-triggered reveal animation
-- responsive one-column behavior on smaller screens
-- readable, indented HTML/CSS
+with capital I and capital P.
+
+Expected files:
+
+Images/People/Dr. Dong-Soo Han.png
+Images/People/Dr. Jae-Hyun Ha.png
+Images/People/Mr. Hanwool Seong.jpg
+Images/People/Mr. Won-Young Choi.jpg
+Images/People/Mr. Seung-Jin Kang.jpg
+Images/People/Ms. Siyeon An.jpg
+Images/People/Ms. Yu-Jeong Jung.jpg
+
+PUBLICATION SOURCE FILES
+========================
+
+Publications/Peerreviewed/publication.html
+Publications/inpreparation/preparation_and_submitted.html
+Publications/book chapter/book_chapters.html
+
+THIS VERSION INCLUDES
+=====================
+
+- Restored full Home page
+- Restored full Research page
+- Visual research cards
+- Spin / Orbital / AFM-Altermagnet / Phonon / Magnetic Nanoelectronics
+- Fukami-inspired People layout
+- Two members per row on desktop
+- Full current-member history restored
+- Co-advisor information restored
+- Full research interests restored
+- Scroll reveal animation
+- PI ORCID link
+- Readable multi-line HTML and CSS
