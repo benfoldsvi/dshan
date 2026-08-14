@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>News | Emerging Nanoelectronics Lab</title>
+  <title>News | Emerging Nanoelectronics</title>
 
   <style>
     :root {
@@ -122,6 +122,32 @@
       color: var(--muted);
     }
   </style>
+
+  <style>
+    .brand-logo {
+      display: inline-flex !important;
+      align-items: center !important;
+      flex-shrink: 0;
+      padding: 7px 0 !important;
+      line-height: 0 !important;
+    }
+
+    .brand-logo img {
+      display: block;
+      width: auto;
+      height: 58px;
+      max-width: 300px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 700px) {
+      .brand-logo img {
+        height: 48px;
+        max-width: 245px;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -130,10 +156,14 @@
     <div class="header-inner">
 
       <a
-        class="brand"
+        class="brand brand-logo"
         href="index.html"
+        aria-label="DS Han Lab. Home"
       >
-        Emerging Nanoelectronics Lab
+        <img
+          src="./Images/Logo/ds-han-lab-logo.png"
+          alt="DS Han Lab."
+        >
       </a>
 
       <a
@@ -198,7 +228,7 @@
         }
 
         document.title =
-          `${post.title} | Emerging Nanoelectronics Lab`;
+          `${post.title} | Emerging Nanoelectronics`;
 
         article.innerHTML = `
           <div class="date">

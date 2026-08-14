@@ -668,3 +668,30 @@ h2 {
     transition: none;
   }
 }
+
+/* =========================
+   DS Han Lab. Header Logo
+   ========================= */
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 8px 0;
+  line-height: 0;
+}
+
+.brand-logo img {
+  display: block;
+  width: auto;
+  height: 58px;
+  max-width: 300px;
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .brand-logo img {
+    height: 48px;
+    max-width: 245px;
+  }
+}

@@ -5,18 +5,46 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Publications | Emerging Nanoelectronics Lab</title>
+  <title>Publications | Emerging Nanoelectronics</title>
 
   <link rel="stylesheet" href="./style.css">
+
+  <style>
+    .brand-logo {
+      display: inline-flex !important;
+      align-items: center !important;
+      flex-shrink: 0;
+      padding: 7px 0 !important;
+      line-height: 0 !important;
+    }
+
+    .brand-logo img {
+      display: block;
+      width: auto;
+      height: 58px;
+      max-width: 300px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 700px) {
+      .brand-logo img {
+        height: 48px;
+        max-width: 245px;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
 
 <header class="site-header">
   <nav class="nav">
-    <a class="brand" href="index.html">
-      Emerging Nanoelectronics Lab
-      <small>Korea Institute of Science and Technology</small>
+    <a class="brand brand-logo" href="index.html" aria-label="DS Han Lab. Home">
+      <img
+        src="./Images/Logo/ds-han-lab-logo.png"
+        alt="DS Han Lab."
+      >
     </a>
 
     <div class="menu">
@@ -181,7 +209,7 @@
 <footer class="footer">
   <div class="footer-inner">
     <div>
-      <strong>Emerging Nanoelectronics Lab</strong><br>
+      <strong>Emerging Nanoelectronics</strong><br>
       Center for Semiconductor Technology, KIST
     </div>
 
