@@ -1,0 +1,56 @@
+DS HAN LAB COMPLETE SITE v2
+
+WHAT IS INCLUDED
+================
+- index.html
+- research.html
+- people.html
+- publications.html
+- news.html
+- news-post.html
+- style.css
+- site.js
+- Images/
+- Publications/
+- News/
+- data/
+- scripts/
+- .pages.yml
+- .github/workflows/pages.yml
+- .nojekyll
+
+UPDATES
+=======
+1. DS Han Lab logo enlarged on ALL pages.
+   Desktop logo height: 112 px
+   Mobile logo height: 82 px
+
+2. Research Interns includes:
+   - Ms. Yu-Jeong Jung
+   - Mr. Min-Jun Kim
+     Undergraduate Research Intern (Kyung Hee University)
+     2026.07 – Present; expected until 2026.08.31
+   - Mr. Sung-Jun Park
+     Undergraduate Research Intern (Kyung Hee University)
+     2026.06 – Present; expected until 2026.08.31
+
+3. Min-Jun Kim and Sung-Jun Park use CSS-generated circular person placeholders.
+
+4. GitHub Pages workflow supports:
+   - automatic deployment after push to main
+   - manual deployment using Actions → Run workflow
+
+HOW TO REPUBLISH AFTER UNPUBLISH
+================================
+1. Upload/commit all files to the repository.
+2. Push to the main branch.
+3. Open GitHub repository → Actions.
+4. Select "Build and deploy GitHub Pages".
+5. If it did not automatically run, click "Run workflow" → main → Run workflow.
+6. Wait until BOTH build and deploy show green check marks.
+7. Then Settings → Pages will show the live site URL again.
+
+IMPORTANT
+=========
+Selecting Settings → Pages → Source → GitHub Actions alone does NOT deploy a site.
+There must be a successful Pages deployment workflow after an Unpublish.

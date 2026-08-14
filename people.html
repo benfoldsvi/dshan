@@ -21,8 +21,8 @@
     .brand-logo img {
       display: block;
       width: auto;
-      height: 82px;
-      max-width: 390px;
+      height: 112px;
+      max-width: 445px;
       object-fit: contain;
     }
 
@@ -51,8 +51,8 @@
 
     @media (max-width: 700px) {
       .brand-logo img {
-        height: 66px;
-        max-width: 315px;
+        height: 82px;
+        max-width: 330px;
       }
 
       .site-header .nav {
@@ -63,6 +63,43 @@
         width: 90px;
         height: 90px;
         flex-basis: 90px;
+      }
+    }
+  </style>
+
+
+  <style>
+    /* Larger DS Han Lab. logo */
+    .site-header .nav,
+    .header-inner {
+      min-height: 126px !important;
+    }
+
+    .brand-logo {
+      display: inline-flex !important;
+      align-items: center !important;
+      flex-shrink: 0 !important;
+      padding: 5px 0 !important;
+      line-height: 0 !important;
+    }
+
+    .brand-logo img {
+      display: block !important;
+      width: auto !important;
+      height: 112px !important;
+      max-width: 445px !important;
+      object-fit: contain !important;
+    }
+
+    @media (max-width: 700px) {
+      .site-header .nav,
+      .header-inner {
+        min-height: 96px !important;
+      }
+
+      .brand-logo img {
+        height: 82px !important;
+        max-width: 330px !important;
       }
     }
   </style>
