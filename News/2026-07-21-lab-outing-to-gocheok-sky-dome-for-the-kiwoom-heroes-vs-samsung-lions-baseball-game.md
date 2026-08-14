@@ -1,6 +1,6 @@
 ---
 title: Lab outing to Gocheok Sky Dome for the Kiwoom Heroes vs. Samsung Lions
-  baseball game.
+  baseball match
 date: 2026-07-21
 summary: Our lab members enjoyed a night out at Gocheok Sky Dome for the Kiwoom
   vs. Samsung game. Samsung won 8–6, to the delight of the Samsung fans on our
