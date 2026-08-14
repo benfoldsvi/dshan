@@ -669,65 +669,65 @@ h2 {
   }
 }
 
-/* =========================
-   DS Han Lab. Header Logo
-   ========================= */
-
-.brand-logo {
-  display: inline-flex;
-  align-items: center;
-  flex-shrink: 0;
-  padding: 8px 0;
-  line-height: 0;
-}
-
-.brand-logo img {
-  display: block;
-  width: auto;
-  height: 112px;
-  max-width: 445px;
-  object-fit: contain;
-}
-
-@media (max-width: 700px) {
-  .brand-logo img {
-    height: 82px;
-    max-width: 330px;
-  }
-}
-
-
 /* =========================================================
-   Larger DS Han Lab. branding
+   Unified DS Han Lab. header
+   Same dimensions on every page
    ========================================================= */
 
-.site-header .nav {
-  min-height: 126px;
+.site-header .nav,
+.header-inner {
+  width: 100%;
+  max-width: 1180px;
+  min-height: 98px;
+  margin: 0 auto;
+  padding-left: 28px;
+  padding-right: 28px;
 }
 
 .brand-logo {
-  display: inline-flex;
-  align-items: center;
-  flex-shrink: 0;
-  padding: 6px 0;
-  line-height: 0;
+  display: inline-flex !important;
+  align-items: center !important;
+  flex: 0 0 auto !important;
+  padding: 4px 0 !important;
+  line-height: 0 !important;
 }
 
 .brand-logo img {
-  display: block;
-  width: auto;
-  height: 112px;
-  max-width: 445px;
-  object-fit: contain;
+  display: block !important;
+  width: 350px !important;
+  height: 98px !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  object-position: left center !important;
 }
 
-@media (max-width: 700px) {
-  .site-header .nav {
-    min-height: 96px;
+@media (max-width: 760px) {
+  .site-header .nav,
+  .header-inner {
+    min-height: 78px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .brand-logo img {
-    height: 82px;
-    max-width: 330px;
+    width: 280px !important;
+    height: 78px !important;
+  }
+}
+
+
+/* Final corrected DS Han Lab logo dimensions */
+.brand-logo img {
+  width: 370px !important;
+  height: 112px !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+}
+
+@media (max-width: 760px) {
+  .brand-logo img {
+    width: 285px !important;
+    height: 86px !important;
   }
 }
