@@ -1,44 +1,16 @@
-EMERGING NANOELECTRONICS LAB v9
+EMERGING NANOELECTRONICS LAB — research representative image update
 
-HOME PAGE
-=========
-- Large Fukami-inspired dark hero
-- Short lab mission statement
-- Research / People / Publications navigation cards
-- News section
-- Scroll reveal animation
+What changed:
+- index.html preserves the uploaded page structure and wording.
+- A Research Highlights section was added using the three approved representative images.
+- research.html uses the same three representative images and exactly three research themes.
+- Images are stored under Images/Research/.
 
-RESEARCH PAGE
-=============
-Three broad research themes:
-
-1. Spin, Orbital & Phonon Transport for Nanoelectronics
-2. Antiferromagnets, Altermagnets & Emerging Materials for Spintronics
-3. MRAM, Probabilistic Computing & Process-in-Memory
-
-PEOPLE PAGE
-===========
-- Images/People/ exactly
-- PI photo rectangular
-- Other member photos circular
-- Two members per row on desktop
-- Full current-member histories
-- Co-advisor information
-- Scroll reveal animation
-
-PUBLICATIONS
-============
-Uses:
-
-Publications/Peerreviewed/publication.html
-Publications/inpreparation/preparation_and_submitted.html
-Publications/book chapter/book_chapters.html
-
-UPLOAD TO GITHUB ROOT
-=====================
+Files to upload:
 index.html
 research.html
-people.html
-publications.html
-news.html
-style.css
+Images/Research/transport.png
+Images/Research/emerging_materials.png
+Images/Research/mram_computing.png
+
+Keep your existing style.css, people.html, publications.html, news.html, Images/People/, and Publications/ folders.

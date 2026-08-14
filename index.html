@@ -8,6 +8,82 @@
   <title>Emerging Nanoelectronics Lab | KIST</title>
 
   <link rel="stylesheet" href="./style.css">
+
+  <style>
+    .research-highlights {
+      background: #ffffff;
+    }
+
+    .research-highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 32px;
+    }
+
+    .research-highlight-card {
+      display: block;
+      overflow: hidden;
+      color: inherit;
+      text-decoration: none;
+      background: #ffffff;
+      border: 1px solid var(--line, #e3e9ef);
+      border-radius: 12px;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, .055);
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+    }
+
+    .research-highlight-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 34px rgba(15, 23, 42, .09);
+    }
+
+    .research-highlight-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1.28 / 1;
+      object-fit: cover;
+      background: #0d2946;
+    }
+
+    .research-highlight-body {
+      padding: 22px 22px 24px;
+    }
+
+    .research-highlight-number {
+      margin-bottom: 9px;
+      color: var(--blue, #1267a8);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .12em;
+    }
+
+    .research-highlight-body h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      line-height: 1.32;
+    }
+
+    .research-highlight-body p {
+      margin: 0;
+      color: var(--muted, #667085);
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .research-highlight-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .research-highlight-card img {
+        aspect-ratio: 1.7 / 1;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -111,6 +187,106 @@
       </div>
     </div>
   </section>
+
+
+  <!-- =========================================================
+       Research Highlights
+       ========================================================= -->
+
+  <section class="research-highlights">
+
+    <div class="container section">
+
+      <div class="kicker reveal">
+        Research
+      </div>
+
+      <h2 class="reveal">
+        Three research directions
+      </h2>
+
+      <p class="lead reveal">
+        We connect transport phenomena, emerging magnetic materials,
+        and magnetic devices with new concepts for nanoelectronics and computing.
+      </p>
+
+      <div class="research-highlight-grid">
+
+        <a
+          class="research-highlight-card reveal"
+          href="research.html#transport"
+        >
+          <img
+            src="./Images/Research/transport.png"
+            alt="Spin, orbital and phonon transport for nanoelectronics"
+          >
+
+          <div class="research-highlight-body">
+            <div class="research-highlight-number">01</div>
+
+            <h3>
+              Spin, Orbital & Phonon Transport for Nanoelectronics
+            </h3>
+
+            <p>
+              Harnessing multiple transport channels and their interconversion
+              for efficient nanoscale electronic devices.
+            </p>
+          </div>
+        </a>
+
+        <a
+          class="research-highlight-card reveal"
+          href="research.html#materials"
+        >
+          <img
+            src="./Images/Research/emerging_materials.png"
+            alt="Antiferromagnets, altermagnets and emerging materials for spintronics"
+          >
+
+          <div class="research-highlight-body">
+            <div class="research-highlight-number">02</div>
+
+            <h3>
+              Antiferromagnets, Altermagnets & Emerging Materials for Spintronics
+            </h3>
+
+            <p>
+              Exploring unconventional magnetic materials and heterostructures
+              for new spintronic functionalities.
+            </p>
+          </div>
+        </a>
+
+        <a
+          class="research-highlight-card reveal"
+          href="research.html#computing"
+        >
+          <img
+            src="./Images/Research/mram_computing.png"
+            alt="MRAM, probabilistic computing and process-in-memory"
+          >
+
+          <div class="research-highlight-body">
+            <div class="research-highlight-number">03</div>
+
+            <h3>
+              MRAM, Probabilistic Computing & Process-in-Memory
+            </h3>
+
+            <p>
+              Developing MTJ-based memory and computing technologies
+              using nonvolatility and stochastic device dynamics.
+            </p>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
 
   <section class="news-section">
     <div class="container section">
