@@ -21,15 +21,48 @@
     .brand-logo img {
       display: block;
       width: auto;
-      height: 58px;
-      max-width: 300px;
+      height: 82px;
+      max-width: 390px;
       object-fit: contain;
+    }
+
+    .site-header .nav {
+      min-height: 98px;
+    }
+
+    .member-photo-placeholder {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      overflow: hidden;
+      flex: 0 0 120px;
+
+      background:
+        radial-gradient(circle at 50% 34%, #9199a3 0 18%, transparent 19%),
+        radial-gradient(ellipse at 50% 82%, #9199a3 0 31%, transparent 32%),
+        linear-gradient(145deg, #edf1f4, #cfd6dc);
+
+      border: 1px solid rgba(255,255,255,.28);
+      border-radius: 50%;
+      box-shadow:
+        inset 0 0 25px rgba(0,0,0,.08),
+        0 4px 12px rgba(0,0,0,.10);
     }
 
     @media (max-width: 700px) {
       .brand-logo img {
-        height: 48px;
-        max-width: 245px;
+        height: 66px;
+        max-width: 315px;
+      }
+
+      .site-header .nav {
+        min-height: 82px;
+      }
+
+      .member-photo-placeholder {
+        width: 90px;
+        height: 90px;
+        flex-basis: 90px;
       }
     }
   </style>
@@ -440,6 +473,63 @@
     </div>
   </div>
 </article>
+      
+
+        <article class="member-row reveal">
+          <div>
+            <div
+              class="member-photo-placeholder"
+              role="img"
+              aria-label="Photo placeholder for Mr. Min-Jun Kim"
+            ></div>
+          </div>
+        
+          <div class="member-info">
+            <div class="member-badge">
+              INTERN
+            </div>
+        
+            <h3 class="member-name">
+              Mr. Min-Jun Kim
+            </h3>
+        
+            <div class="member-role">
+              Undergraduate Research Intern (Kyung Hee University)
+            </div>
+        
+            <div class="member-history">
+              <div>[2026.07 – Present; expected until 2026.08.31] Center for Semiconductor Technology, KIST</div>
+            </div>
+          </div>
+        </article>
+        
+        <article class="member-row reveal">
+          <div>
+            <div
+              class="member-photo-placeholder"
+              role="img"
+              aria-label="Photo placeholder for Mr. Sung-Jun Park"
+            ></div>
+          </div>
+        
+          <div class="member-info">
+            <div class="member-badge">
+              INTERN
+            </div>
+        
+            <h3 class="member-name">
+              Mr. Sung-Jun Park
+            </h3>
+        
+            <div class="member-role">
+              Undergraduate Research Intern (Kyung Hee University)
+            </div>
+        
+            <div class="member-history">
+              <div>[2026.06 – Present; expected until 2026.08.31] Center for Semiconductor Technology, KIST</div>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
