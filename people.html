@@ -17,7 +17,60 @@
       padding: 7px 0 !important;
       line-height: 0 !important;
     }
-
+    .member-photo-placeholder {
+      position: relative;
+    
+      width: 120px;
+      height: 120px;
+    
+      flex: 0 0 120px;
+    
+      border-radius: 50%;
+    
+      background: #253445;
+    
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    
+      overflow: hidden;
+    }
+    
+    /* Head */
+    .member-photo-placeholder::before {
+      content: "";
+    
+      position: absolute;
+    
+      width: 34px;
+      height: 34px;
+    
+      left: 50%;
+      top: 24px;
+    
+      transform: translateX(-50%);
+    
+      border-radius: 50%;
+    
+      background: #9aa7b5;
+    }
+    
+    /* Body */
+    .member-photo-placeholder::after {
+      content: "";
+    
+      position: absolute;
+    
+      width: 64px;
+      height: 42px;
+    
+      left: 50%;
+      bottom: 18px;
+    
+      transform: translateX(-50%);
+    
+      border-radius: 34px 34px 18px 18px;
+    
+      background: #9aa7b5;
+    }
     .brand-logo img {
       display: block;
       width: auto;
@@ -375,7 +428,7 @@
     </div>
 
     <div class="member-email">
-      <a href="mailto:jbchoi@kist.re.kr">
+      <a href="mailto:093735@kist.re.kr">
         jbchoi@kist.re.kr
       </a>
     </div>
