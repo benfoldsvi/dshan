@@ -684,14 +684,14 @@ h2 {
 .brand-logo img {
   display: block;
   width: auto;
-  height: 82px;
-  max-width: 390px;
+  height: 58px;
+  max-width: 300px;
   object-fit: contain;
 }
 
 @media (max-width: 700px) {
   .brand-logo img {
-    height: 66px;
-    max-width: 315px;
+    height: 48px;
+    max-width: 245px;
   }
 }
