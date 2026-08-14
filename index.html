@@ -902,68 +902,13 @@
 
       </div>
 
-      <div class="news-list">
-
-        <article class="news-item reveal">
-
-          <div class="news-date">
-            2026.08
-          </div>
-
+      <div class="news-list" id="home-news-list">
+        <div class="news-item reveal is-visible">
+          <div class="news-date">Loading</div>
           <div>
-
-            <h3 class="news-title">
-              Emerging Nanoelectronics Lab website launched
-            </h3>
-
-            <div class="news-text">
-              A new website for our research group is now online.
-            </div>
-
+            <h3 class="news-title">Loading latest news...</h3>
           </div>
-
-        </article>
-
-        <article class="news-item reveal delay-1">
-
-          <div class="news-date">
-            ADD DATE
-          </div>
-
-          <div>
-
-            <h3 class="news-title">
-              Add your latest publication, award, or group news here
-            </h3>
-
-            <div class="news-text">
-              Copy this block whenever you want to add another update.
-            </div>
-
-          </div>
-
-        </article>
-
-        <article class="news-item reveal delay-2">
-
-          <div class="news-date">
-            ADD DATE
-          </div>
-
-          <div>
-
-            <h3 class="news-title">
-              Add another research highlight or group activity
-            </h3>
-
-            <div class="news-text">
-              News items appear automatically as the user scrolls down.
-            </div>
-
-          </div>
-
-        </article>
-
+        </div>
       </div>
 
     </div>
@@ -1033,6 +978,104 @@
     revealElements.forEach(function(element) {
       revealObserver.observe(element);
     });
+  </script>
+
+
+  <script>
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function formatNewsDate(dateValue) {
+      if (!dateValue) {
+        return "";
+      }
+
+      const parts = dateValue.split("-");
+
+      if (parts.length >= 2) {
+        return `${parts[0]}.${parts[1]}`;
+      }
+
+      return dateValue;
+    }
+
+    async function loadHomeNews() {
+      const container =
+        document.getElementById("home-news-list");
+
+      try {
+        const response =
+          await fetch("./data/news.json", {
+            cache: "no-store"
+          });
+
+        if (!response.ok) {
+          throw new Error("news.json could not be loaded");
+        }
+
+        const posts = await response.json();
+        const latest = posts.slice(0, 3);
+
+        if (!latest.length) {
+          container.innerHTML = `
+            <article class="news-item">
+              <div class="news-date"></div>
+              <div>
+                <h3 class="news-title">
+                  No news has been posted yet.
+                </h3>
+              </div>
+            </article>
+          `;
+          return;
+        }
+
+        container.innerHTML =
+          latest
+            .map(
+              (post, index) => `
+                <article class="news-item reveal is-visible">
+                  <div class="news-date">
+                    ${escapeHtml(formatNewsDate(post.date))}
+                  </div>
+
+                  <div>
+                    <h3 class="news-title">
+                      <a href="news-post.html?slug=${encodeURIComponent(post.slug)}">
+                        ${escapeHtml(post.title)}
+                      </a>
+                    </h3>
+
+                    <div class="news-text">
+                      ${escapeHtml(post.summary)}
+                    </div>
+                  </div>
+                </article>
+              `
+            )
+            .join("");
+      }
+      catch (error) {
+        container.innerHTML = `
+          <article class="news-item">
+            <div class="news-date"></div>
+            <div>
+              <h3 class="news-title">
+                News will appear here after the first site build.
+              </h3>
+            </div>
+          </article>
+        `;
+      }
+    }
+
+    loadHomeNews();
   </script>
 
 </body>

@@ -1,0 +1,76 @@
+media:
+  - name: news_images
+    label: News Images
+    input: Images/News
+    output: Images/News
+    rename: safe
+    categories: [image]
+
+content:
+  - name: news
+    label: News
+    type: collection
+    path: News
+    format: yaml-frontmatter
+
+    filename:
+      template: "{date}-{title}.md"
+      field: false
+
+    view:
+      fields: [title, date, published]
+      primary: title
+      sort: [date, title]
+      search: [title, summary, body]
+      default:
+        sort: date
+        order: desc
+
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+
+      - name: date
+        label: Date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+
+      - name: summary
+        label: Short summary
+        type: text
+        required: true
+        description: Short text shown on the Home and News list pages.
+        options:
+          maxlength: 350
+
+      - name: cover
+        label: Cover image
+        type: image
+        required: false
+        options:
+          media: news_images
+          extensions: [jpg, jpeg, png, webp]
+          rename: safe
+
+      - name: published
+        label: Published
+        type: boolean
+        default: true
+
+      - name: body
+        label: Article
+        type: rich-text
+        options:
+          format: markdown
+          switcher: true
+          media: news_images
+          extensions: [jpg, jpeg, png, webp]
+          rename: safe
+
+settings:
+  content:
+    merge: true

@@ -7,122 +7,315 @@
 
   <title>News | Emerging Nanoelectronics Lab</title>
 
-  <link rel="stylesheet" href="./style.css">
+  <style>
+    :root {
+      --navy: #06182e;
+      --blue: #168cff;
+      --ink: #eef4f8;
+      --muted: #a9b8c7;
+      --line: rgba(255,255,255,.12);
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 18%, rgba(0,192,255,.09), transparent 24%),
+        radial-gradient(circle at 92% 22%, rgba(255,40,105,.08), transparent 25%),
+        #020b14;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(2,12,22,.97);
+      border-bottom: 1px solid rgba(255,255,255,.10);
+    }
+
+    .nav {
+      max-width: var(--max);
+      min-height: 78px;
+      margin: auto;
+      padding: 0 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .brand small {
+      display: block;
+      margin-top: 4px;
+      color: #aebccc;
+      font-size: 10px;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .menu {
+      display: flex;
+      gap: 24px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .menu a {
+      padding: 28px 0 24px;
+    }
+
+    .container {
+      max-width: var(--max);
+      margin: auto;
+      padding-left: 28px;
+      padding-right: 28px;
+    }
+
+    .page-head {
+      padding: 64px 0 36px;
+    }
+
+    .kicker {
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 7px 0 8px;
+      font-size: 46px;
+      letter-spacing: -.03em;
+    }
+
+    .lead {
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .news-grid {
+      padding: 18px 0 80px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .news-card {
+      overflow: hidden;
+      background: rgba(5,20,34,.88);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      transition: transform .24s ease, border-color .24s ease;
+    }
+
+    .news-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(22,140,255,.55);
+    }
+
+    .news-cover {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      display: block;
+      background: #081827;
+    }
+
+    .news-card-body {
+      padding: 22px 22px 24px;
+    }
+
+    .news-date {
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .news-card h2 {
+      margin: 8px 0 9px;
+      font-size: 21px;
+      line-height: 1.35;
+    }
+
+    .news-summary {
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+
+    .read-more {
+      display: inline-block;
+      margin-top: 17px;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .empty {
+      padding: 40px 0 80px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 800px) {
+      .menu {
+        display: none;
+      }
+
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="site-header">
-  <nav class="nav">
-    <a class="brand" href="index.html">
-      Emerging Nanoelectronics Lab
-      <small>Korea Institute of Science and Technology</small>
-    </a>
+  <header class="site-header">
+    <nav class="nav">
 
-    <div class="menu">
-      <a href="index.html">HOME</a>
-      <a href="research.html">RESEARCH</a>
-      <a href="people.html">PEOPLE</a>
-      <a href="publications.html">PUBLICATIONS</a>
-      <a href="news.html">NEWS</a>
-      <a href="mailto:dshan@kist.re.kr">CONTACT</a>
-    </div>
-  </nav>
-</header>
+      <a class="brand" href="index.html">
+        Emerging Nanoelectronics Lab
+        <small>Korea Institute of Science and Technology</small>
+      </a>
 
-  <div class="page-head">
-    <div class="container">
-      <div class="breadcrumb">
-        Home / News
+      <div class="menu">
+        <a href="index.html">HOME</a>
+        <a href="research.html">RESEARCH</a>
+        <a href="people.html">PEOPLE</a>
+        <a href="publications.html">PUBLICATIONS</a>
+        <a href="news.html">NEWS</a>
       </div>
 
-      <h1>
-        News
-      </h1>
-    </div>
-  </div>
+    </nav>
+  </header>
 
-  <section class="container section">
+  <main class="container">
 
-    <div class="kicker reveal">
-      Group Updates
-    </div>
+    <div class="page-head">
+      <div class="kicker">Group Updates</div>
 
-    <h2 class="reveal">
-      Latest News
-    </h2>
+      <h1>News</h1>
 
-    <div class="news-list">
-
-      <article class="news-item reveal">
-        <div class="news-date">2026</div>
-
-        <div>
-          <h3 class="news-title">
-            Emerging Nanoelectronics Lab website launched
-          </h3>
-
-          <div class="news-text">
-            A new website for our research group is now online.
-          </div>
-        </div>
-      </article>
-
-      <article class="news-item reveal">
-        <div class="news-date">ADD DATE</div>
-
-        <div>
-          <h3 class="news-title">
-            Add a new publication, award or event here
-          </h3>
-
-          <div class="news-text">
-            Copy this block whenever you want to add another update.
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-<footer class="footer">
-  <div class="footer-inner">
-    <div>
-      <strong>Emerging Nanoelectronics Lab</strong><br>
-      Center for Semiconductor Technology, KIST
+      <p class="lead">
+        Publications, research highlights, awards, and group activities
+        from the Emerging Nanoelectronics Lab.
+      </p>
     </div>
 
-    <div>
-      <strong>Contact</strong><br>
-      dshan@kist.re.kr · +82-2-958-5405
+    <div
+      class="news-grid"
+      id="news-grid"
+    >
+      <div class="empty">
+        Loading news...
+      </div>
     </div>
 
-    <div>© 2026 Dong-Soo Han</div>
-  </div>
-</footer>
+  </main>
 
-<script>
-  const revealElements = document.querySelectorAll(".reveal");
-
-  const revealObserver = new IntersectionObserver(
-    function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.12,
-      rootMargin: "0px 0px -45px 0px"
+  <script>
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
     }
-  );
 
-  revealElements.forEach(function(element) {
-    revealObserver.observe(element);
-  });
-</script>
+    async function loadNews() {
+      const grid =
+        document.getElementById("news-grid");
+
+      try {
+        const response =
+          await fetch("./data/news.json", {
+            cache: "no-store"
+          });
+
+        if (!response.ok) {
+          throw new Error("Could not load news.");
+        }
+
+        const posts = await response.json();
+
+        if (!posts.length) {
+          grid.innerHTML =
+            '<div class="empty">No news has been posted yet.</div>';
+          return;
+        }
+
+        grid.innerHTML =
+          posts
+            .map(
+              post => `
+                <article class="news-card">
+                  ${
+                    post.cover
+                      ? `
+                        <a href="news-post.html?slug=${encodeURIComponent(post.slug)}">
+                          <img
+                            class="news-cover"
+                            src="./${escapeHtml(post.cover)}"
+                            alt="${escapeHtml(post.title)}"
+                          >
+                        </a>
+                      `
+                      : ""
+                  }
+
+                  <div class="news-card-body">
+                    <div class="news-date">
+                      ${escapeHtml(post.date)}
+                    </div>
+
+                    <h2>
+                      <a href="news-post.html?slug=${encodeURIComponent(post.slug)}">
+                        ${escapeHtml(post.title)}
+                      </a>
+                    </h2>
+
+                    <div class="news-summary">
+                      ${escapeHtml(post.summary)}
+                    </div>
+
+                    <a
+                      class="read-more"
+                      href="news-post.html?slug=${encodeURIComponent(post.slug)}"
+                    >
+                      Read more →
+                    </a>
+                  </div>
+                </article>
+              `
+            )
+            .join("");
+      }
+      catch (error) {
+        grid.innerHTML =
+          '<div class="empty">News will appear after the GitHub Pages build completes.</div>';
+      }
+    }
+
+    loadNews();
+  </script>
 
 </body>
 </html>
